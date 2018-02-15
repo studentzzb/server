@@ -33,7 +33,7 @@ var UserList = {
 		// initialize these entries
 		this.$el.find('.quota-user').singleSelect().on('change', this.onQuotaSelect);
 		OC.registerMenu(
-			$('.app-navigation-new > button'),
+			$('#new-user-button'),
 			$('#newuserHeader'),
 			function() {
 				$('#newusername').focus();
