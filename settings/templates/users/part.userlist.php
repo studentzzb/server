@@ -50,8 +50,8 @@
 					<input id="recoveryPassword"
 						   type="password"
 						   placeholder="<?php p($l->t('Admin Recovery Password'))?>"
-						   title="<?php p($l->t('Enter tde recovery password in order to recover tde users files during password change'))?>"
-						   alt="<?php p($l->t('Enter tde recovery password in order to recover tde users files during password change'))?>"/>
+						   title="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"
+						   alt="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"/>
 				</td>
 			<?php endif; ?>
 				<td class="userActions">
@@ -63,7 +63,7 @@
 			<!-- the following <tr> is used as a template for the JS part -->
 			<tr style="display:none">
 				<td class="avatar"><div class="avatardiv"></div></td>
-				<th class="name" scope="row"></th>
+				<td class="name" scope="row"></td>
 				<td class="displayName"><span></span> <img class="action"
 					src="<?php p(image_path('core', 'actions/rename.svg'))?>"
 					alt="<?php p($l->t('change full name'))?>" title="<?php p($l->t('change full name'))?>"/>
