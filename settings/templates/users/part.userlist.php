@@ -11,6 +11,9 @@
 			<?php if(is_array($_['subadmins']) || $_['subadmins']): ?>
 				<th id="headerSubAdmins" scope="col"><?php p($l->t('Group admin for')); ?></th>
 			<?php endif;?>
+			<?php if((bool)$_['recoveryAdminEnabled']): ?>
+				<th id="recoveryPassword" scope="col"><?php p($l->t('Recovery password')); ?></th>
+			<?php endif; ?>
 				<th id="headerQuota" scope="col"><?php p($l->t('Quota')); ?></th>
 				<th class="storageLocation" scope="col"><?php p($l->t('Storage location')); ?></th>
 				<th class="userBackend" scope="col"><?php p($l->t('User backend')); ?></th>
@@ -45,6 +48,9 @@
 						<span class="icon-triangle-s"></span>
 					</div>
 				</td>
+			<?php if(is_array($_['subadmins']) || $_['subadmins']): ?>
+				<td></td>
+			<?php endif;?>
 			<?php if((bool)$_['recoveryAdminEnabled']): ?>
 				<td class="recoveryPassword">
 					<input id="recoveryPassword"
@@ -54,6 +60,10 @@
 						   alt="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"/>
 				</td>
 			<?php endif; ?>
+				<td class="quota"></td>
+				<td class="storageLocation" scope="col"></td>
+				<td class="userBackend" scope="col"></td>
+				<td class="lastLogin" scope="col"></td>
 				<td class="userActions">
 					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Add user'))?>" />
 				</td>
@@ -84,6 +94,9 @@
 					><span class="title groupsList"></span><span class="icon-triangle-s"></span></div>
 				</td>
 			<?php endif;?>
+			<?php if((bool)$_['recoveryAdminEnabled']): ?>
+				<td></td>
+			<?php endif; ?>
 				<td class="quota">
 					<select class="quota-user" data-inputtitle="<?php p($l->t('Please enter storage quota (ex: "512 MB" or "12 GB")')) ?>">
 						<option	value='default'>

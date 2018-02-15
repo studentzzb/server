@@ -1177,17 +1177,17 @@ $(document).ready(function () {
 	});
 
 	if ($('#CheckboxMailOnUserCreate').is(':checked')) {
-		$("#newemail").show();
+		$("#newuserHeader .mailAddress").show();
 	}
 	// Option to display/hide the "E-Mail" input field
 	$('#CheckboxMailOnUserCreate').click(function () {
 		if ($('#CheckboxMailOnUserCreate').is(':checked')) {
-			$("#newemail").show();
+			$("#newuserHeader .mailAddress").show();
 			if (OC.isUserAdmin()) {
 				OCP.AppConfig.setValue('core', 'umgmt_send_email', 'true');
 			}
 		} else {
-			$("#newemail").hide();
+			$("#newuserHeader .mailAddress").hide();
 			if (OC.isUserAdmin()) {
 				OCP.AppConfig.setValue('core', 'umgmt_send_email', 'false');
 			}
