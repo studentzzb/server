@@ -18,45 +18,45 @@
 				<th class="userActions"></th>
 			</tr>
 			<tr id="newuserHeader" style="display:none">
-				<th class="icon-add"></th>
-				<th class="name">
+				<td class="icon-add"></td>
+				<td class="name">
 					<input id="newusername" type="text" required
 						placeholder="<?php p($l->t('Username'))?>" name="username"
 						autocomplete="off" autocapitalize="none" autocorrect="off" />
-				</th>
-				<th class="displayName">
+				</td>
+				<td class="displayName">
 					<input id="newdisplayname" type="text"
 						placeholder="<?php p($l->t('Full name'))?>" name="displayname"
 						autocomplete="off" autocapitalize="none" autocorrect="off" />
-				</th>
-				<th class="password">
+				</td>
+				<td class="password">
 					<input id="newuserpassword" type="password" required
 						   placeholder="<?php p($l->t('Password'))?>" name="password"
 						   autocomplete="new-password" autocapitalize="none" autocorrect="off" />
-				</th>
-				<th class="mailAddress">
+				</td>
+				<td class="mailAddress">
 					<input id="newemail" type="text"
 						   placeholder="<?php p($l->t('E-Mail'))?>" name="email"
 						   autocomplete="off" autocapitalize="none" autocorrect="off" />
-				</th>
-				<th class="groups">
+				</td>
+				<td class="groups">
 					<div class="groupsListContainer multiselect button" data-placeholder="<?php p($l->t('Groups'))?>">
 						<span class="title groupsList"></span>
 						<span class="icon-triangle-s"></span>
 					</div>
-				</th>
+				</td>
 			<?php if((bool)$_['recoveryAdminEnabled']): ?>
-				<th class="recoveryPassword">
+				<td class="recoveryPassword">
 					<input id="recoveryPassword"
 						   type="password"
 						   placeholder="<?php p($l->t('Admin Recovery Password'))?>"
-						   title="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"
-						   alt="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"/>
-				</th>
+						   title="<?php p($l->t('Enter tde recovery password in order to recover tde users files during password change'))?>"
+						   alt="<?php p($l->t('Enter tde recovery password in order to recover tde users files during password change'))?>"/>
+				</td>
 			<?php endif; ?>
-				<th class="userActions">
+				<td class="userActions">
 					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Add user'))?>" />
-				</th>
+				</td>
 			</tr>
 		</thead>
 		<tbody>
