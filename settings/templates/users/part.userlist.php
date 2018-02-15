@@ -35,7 +35,7 @@
 						   autocomplete="new-password" autocapitalize="none" autocorrect="off" />
 				</td>
 				<td class="mailAddress">
-					<input id="newemail" type="text"
+					<input id="newemail" type="email"
 						   placeholder="<?php p($l->t('E-Mail'))?>" name="email"
 						   autocomplete="off" autocapitalize="none" autocorrect="off" />
 				</td>
